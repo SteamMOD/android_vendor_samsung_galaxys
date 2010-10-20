@@ -37,9 +37,5 @@ BOARD_SYSTEM_FILESYSTEM_OPTIONS := llw,check=no
 BOARD_CACHE_DEVICE := /dev/block/stl11
 BOARD_CACHE_FILESYSTEM := auto
 BOARD_CACHE_FILESYSTEM_OPTIONS := llw,check=no,nosuid,nodev
-# The following is the *actual* sd card, but those don't mount in recovery.
-# The mmc blocks aren't even available.
-# Only internal storage (mmcblk0) is available.
-#BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1
-#BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
-BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
+BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk0p1
+BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p1
